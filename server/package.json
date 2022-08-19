@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server Documentation",
+  "author": "Kukun",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "@types/node": "^18.7.6",
+    "typescript": "^4.7.4"
+  }
+}
