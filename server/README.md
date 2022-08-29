@@ -1,61 +1,34 @@
 <p align="center">
 <a href="/" target="_blank">
-<img src="logo.svg" width="400">
+<img src="logo.svg" width="400" alt="Logo">
 </a></p>
 
 <p align="center">
-<a>rustc 1.62.0 (fe5b13d68 2022-05-18)</a> |
-<a>Microsoft C++ Build Tools</a> |
-<a>Cargo 1.62.0</a>
+<a href="https://nodejs.org/" target="_blank">Nodejs 18.8.0</a> |
+<a href="" target="_blank">graphql 16.6.0</a> |
+<a href="https://www.apollographql.com/docs/apollo-server/getting-started" target="_blank">apollo-server 3.10.2</a> |
 </p>
 
 ___
 
 ## Command Line
 
-- Cập nhật Rust:
-  `rustup update`
-- Gỡ cài đặt Rust:
-  `rustup self uninstall`
-- Kiểm tra phiên bản Rust:
-  `rustc --version`
-- Kiểm tra phiên bản Cargo:
-  `cargo --version`
-- Mở Document Project
-  `cargo doc --open`
+- Fresh lib NodeJs Linux
+  `rm -rf .yarn/ dist/ .pnp.cjs .pnp.loader.mjs yarn.lock`
+
 - Generate Secret Key 256-bit base64 key:
   `openssl rand -base64 32`
-
-___
-
-- Writing Automated Tests:
-  `cargo test`
-
-- Check a Cargo Project:
-  `cargo check`
-
-- Building a Cargo Project:
-  `cargo build`
-  `cargo build --release` or `cargo build -r`
-
-- Building and Running a Cargo Project:
-  `cargo run`
-  `cargo run --release` or `cargo run -r`
-
-- Reload automatically when I change source code:
-  `cargo watch -x run`
+- Create file tsconfig.json:
+  `tsc --init`
 
 ___
 
 ## Install Enviroment
 
-> https://visualstudio.microsoft.com/visual-cpp-build-tools/
+> https://www.apollographql.com/docs/apollo-server/getting-started
 >
-> https://www.rust-lang.org/
->
-> https://rocket.rs/
 
-### Cargo uses conventions for file placement to make it easy to dive into a new Cargo package:
+### Project Structure
 
 ```
 ├── Cargo.lock
@@ -87,28 +60,3 @@ ___
 ```
 
 ***
-
-- `Cargo.toml` and `Cargo.lock` are stored in the root of your package (package root).
-- Source code goes in the `src` directory.
-- The **default library** file is `src/lib.rs`.
-- The **default executable** file is `src/main.rs`.
-    - **Other executables** can be placed in `src/bin/`.
-- **Benchmarks** go in the `benches` directory.
-- **Examples** go in the `examples` directory.
-- **Integration tests** go in the `tests` directory.
-
-If a `binary`, `example`, `bench`, or `integration test` consists of multiple source files, place a main.rs file along
-with the
-extra [modules](https://doc.rust-lang.org/cargo/appendix/glossary.html#module) within a subdirectory of the `src/bin`
-, `examples`, `benches`, or `tests` directory. The name of the
-executable
-
-will be the directory name.
-
-You can learn more about Rust's module system in
-the [book](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html).
-
-See [Configuring a target](https://doc.rust-lang.org/cargo/reference/cargo-targets.html#configuring-a-target) for more
-details on manually configuring targets.
-See [Target auto-discovery](https://doc.rust-lang.org/cargo/reference/cargo-targets.html#target-auto-discovery) for more
-information on controlling how Cargo automatically infers target names.
